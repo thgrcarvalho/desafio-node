@@ -4,15 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "start": "sucrase-node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest"
   },
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
-    "express-brute": "^1.0.1",
     "express-handlebars": "^3.1.0",
     "express-rate-limit": "^5.0.0",
     "helmet": "^3.20.0",
@@ -20,10 +21,11 @@
     "pg": "^7.11.0",
     "pg-hstore": "^2.3.3",
     "rate-limit-redis": "^1.6.0",
-    "sequelize": "^5.9.0",
+    "sequelize": "^5.21.2",
     "yup": "^0.27.0"
   },
   "devDependencies": {
+    "@sucrase/jest-plugin": "^2.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^6.0.0",

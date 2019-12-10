@@ -7,17 +7,13 @@ const formatUserInput = (inputJson) => {
     CEP,
   } = inputJson
 
-  const teste = {
+  return {
     nome,
     email,
     senha,
     Phones: telefones,
     cep: CEP
   }
-
-  console.log(teste)
-
-  return teste
 }
 
 const formatUserOutput = (outputJson) => {
