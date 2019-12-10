@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run clean && yarn run build && sucrase-node dist/server.js",
+    "start": "sucrase-node dist/server.js",
     "clean": "rimraf dist",
-    "build": "sucrase ./src -d ./dist --transforms imports",
+    "build": "yarn run clean && sucrase ./src -d ./dist --transforms imports",
     "dev": "nodemon src/server.js",
     "test": "jest"
   },
@@ -25,6 +25,7 @@
     "rate-limit-redis": "^1.6.0",
     "rimraf": "^3.0.0",
     "sequelize": "^5.21.2",
+    "sucrase": "^3.10.1",
     "yup": "^0.27.0"
   },
   "devDependencies": {
@@ -37,7 +38,6 @@
     "jest": "^24.9.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
-    "sequelize-cli": "^5.5.0",
-    "sucrase": "^3.10.1"
+    "sequelize-cli": "^5.5.0"
   }
 }
