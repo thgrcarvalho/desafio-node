@@ -19,8 +19,6 @@ routes.post('/users',
   UserController.createUser
 )
 
-routes.use(authMiddleware)
-
-routes.get('/users/:id', UserController.find)
+routes.get('/users/:id', authMiddleware, UserController.find)
 
 export default routes

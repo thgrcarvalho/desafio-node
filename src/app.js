@@ -4,6 +4,7 @@ import cors from 'cors'
 import helmet from 'helmet'
 import 'express-async-errors'
 import routes from './routes'
+import pagina404 from './app/middlewares/404';
 
 class App {
   constructor() {
@@ -34,6 +35,7 @@ class App {
 
   routes() {
     this.server.use(routes)
+    this.server.use(pagina404);
   }
 }
 
