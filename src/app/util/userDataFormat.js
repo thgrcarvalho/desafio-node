@@ -31,18 +31,18 @@ const formatUserOutput = (outputJson) => {
     ultimoLogin,
   } = outputJson
 
-    return {
-      id,
-      nome,
-      email,
-      telefones: formatPhones(Phones),
-      senha: senhaHash,
-      CEP: cep,
-      token,
-      data_criacao: createdAt,
-      data_atualizacao: updatedAt,
-      ultimo_login: ultimoLogin
-    }
+  return {
+    id,
+    nome,
+    email,
+    telefones: formatPhones(Phones),
+    senha: senhaHash,
+    CEP: cep,
+    token,
+    data_criacao: createdAt,
+    data_atualizacao: updatedAt,
+    ultimo_login: ultimoLogin
+  }
 }
 
 const formatPhones = (Phones) => {

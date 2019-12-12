@@ -28,12 +28,11 @@ class UserController {
       createdAt,
       updatedAt,
       ultimoLogin
-    } = await User.create(req.body,{
-        include: [{
-          model: Phone
-        }]
-      }
-    )
+    } = await User.create(req.body, {
+      include: [{
+        model: Phone
+      }]
+    })
 
     const token = jwt.sign({ id }, authConfig.secret, {
       expiresIn: authConfig.expiresIn,
@@ -41,7 +40,7 @@ class UserController {
 
     await User.update(
       { token },
-      { where: {id} }
+      { where: { id } }
     )
 
     const geolocation = null
